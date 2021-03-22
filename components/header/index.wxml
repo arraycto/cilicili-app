@@ -1,0 +1,11 @@
+<view class="header">
+    <van-nav-bar border="{{false}}" fixed="{{true}}" placeholder="{{true}}">
+        <view slot="left" class="header-t1">{{title}}</view>
+    </van-nav-bar>
+    <view class="header-des">
+        <view class="header-t2">{{description}}</view>
+        <view class="icon">
+            <van-icon name="{{icon}}"/>
+        </view>
+    </view>
+</view>

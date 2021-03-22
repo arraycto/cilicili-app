@@ -1,0 +1,46 @@
+page {
+    color: #7d7e80;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+.page-view {
+    padding: 0 30rpx;
+}
+
+scroll-view {
+    height: 80vh;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.van-nav-bar {
+    color: #ffffff;
+    background: #000000 !important;
+}
+
+.van-tabbar-item {
+    letter-spacing: 5rpx;
+    font-weight: bolder;
+}
+
+.van-tabbar {
+    background: var(--ground-glass-color) !important;
+    backdrop-filter: var(--ground-glass-filter);
+    padding-top: 1vh !important;
+}

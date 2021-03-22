@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "header": "/components/header",
+    "home-page": "/pages/home/home",
+    "follow-page": "/pages/follow/follow",
+    "message-page": "/pages/message/message",
+    "myself-page": "/pages/myself/myself",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  }
+}

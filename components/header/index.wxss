@@ -1,0 +1,25 @@
+.header {
+}
+
+.icon {
+    padding-top: 5rpx;
+    padding-left: 8rpx;
+    font-size: 25rpx;
+}
+
+.header-des {
+    display: flex;
+}
+
+.header-t1 {
+    font-size: 45rpx;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.header-t2 {
+    font-size: 25rpx;
+    letter-spacing: 1px;
+    padding-left: 32rpx;
+    padding-bottom: 2vh;
+}

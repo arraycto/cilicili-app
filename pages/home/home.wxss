@@ -1,0 +1,53 @@
+.card {
+    height: 20vh;
+    margin: 2vh 0 3vh 0;
+    border-radius: 10rpx;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15rpx;
+}
+
+.room-card {
+    margin-bottom: 40rpx;
+}
+
+.room-card-image {
+    width: 100%;
+    height: 200rpx;
+    border-radius: 15rpx;
+}
+
+.room-card-t {
+    color: rgba(256, 256, 256, .8);
+    padding-top: 2px;
+    font-weight: 500;
+    font-size: 25rpx;
+}
+
+.room-card-d {
+    padding-top: 2px;
+    font-size: 20rpx;
+}
+
+.list-header {
+    margin: 4vh 0 3vh 0;
+}
+
+.list-header-title {
+    color: #ffffff;
+    font-size: 35rpx;
+    font-weight: bolder;
+}
+
+.list-header-more {
+    float: right;
+    font-size: 25rpx;
+}
+
+.list-header-des {
+    font-size: 25rpx;
+    padding-top: 1vh;
+}

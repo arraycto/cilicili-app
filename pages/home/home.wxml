@@ -1,0 +1,36 @@
+<view>
+    <view class="card">
+        <image class="card-image" mode="aspectFill" src="../../assets/home.jpeg"></image>
+    </view>
+    <view class="list-header">
+        <text class="list-header-title">正在热播</text>
+        <text class="list-header-more">更多</text>
+        <view class="list-header-des">或许其中有你喜欢的主播～</view>
+    </view>
+
+    <van-row gutter="15">
+        <van-col span="12" wx:for="{{roomList}}" wx:key="index">
+            <view class="room-card">
+                <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
+                <view class="room-card-t">我今天必吃鸡芜湖</view>
+                <view class="room-card-d">White五五开</view>
+            </view>
+        </van-col>
+    </van-row>
+
+    <view class="list-header">
+        <text class="list-header-title">推荐视频</text>
+        <text class="list-header-more">更多</text>
+        <view class="list-header-des">为您挑选的有趣视频</view>
+    </view>
+    <van-row gutter="15">
+        <van-col span="12" wx:for="{{roomList}}" wx:key="index">
+            <view>
+                <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
+                <text class="room-card-t">我今天必吃鸡芜湖</text>
+                <text class="room-card-t">White五五开</text>
+            </view>
+        </van-col>
+    </van-row>
+
+</view>

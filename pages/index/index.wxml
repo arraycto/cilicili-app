@@ -1,0 +1,37 @@
+<view class="app">
+    <view class="container">
+        <view wx:if="{{active === 0}}">
+            <header title="Home" description="欢迎来到cilicili直播" icon="live"/>
+            <view class="page-view" scroll-y="{{true}}">
+                <home-page/>
+            </view>
+        </view>
+        <view wx:if="{{active === 1}}">
+            <header title="Follow" description="这里都是我喜欢的主播" icon="star"/>
+            <scroll-view scroll-y="{{true}}">
+                <follow-page/>
+            </scroll-view>
+        </view>
+        <view wx:if="{{active === 2}}">
+            <header title="Ding" description="我收到的消息与互动" icon="smile-comment"/>
+            <scroll-view scroll-y="{{true}}">
+                <message-page/>
+            </scroll-view>
+        </view>
+        <view wx:if="{{active === 3}}">
+            <header title="Mine" description="在这里修改我的信息" icon="smile"/>
+            <scroll-view scroll-y="{{true}}">
+                <myself-page/>
+            </scroll-view>
+        </view>
+    </view>
+    <van-tabbar active="{{ active }}"
+                bind:change="onChange"
+                active-color=""
+                border="{{false}}">
+        <van-tabbar-item icon="wap-home">Home</van-tabbar-item>
+        <van-tabbar-item icon="like">Follow</van-tabbar-item>
+        <van-tabbar-item icon="bell">Ding</van-tabbar-item>
+        <van-tabbar-item icon="manager">Mine</van-tabbar-item>
+    </van-tabbar>
+</view>
