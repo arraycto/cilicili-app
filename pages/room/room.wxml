@@ -1,2 +1,21 @@
-<!--pages/room/room.wxml-->
-<text>pages/room/room.wxml</text>
+<view class="main">
+    <image mode="aspectFill" class="background-image" src="../../assets/home.jpeg"/>
+    <van-nav-bar
+            left-text="Return"
+            z-index="9"
+            border="{{false}}"
+            fixed="{{false}}"
+            left-arrow
+            bind:click-left="onClickLeft"
+    />
+
+    <video autoplay="{{true}}"
+           style="height: {{videoHeight}}px;"
+           show-center-play-btn="{{false}}"
+           enable-progress-gesture="{{false}}"
+           loop="{{true}}"
+           controls="{{false}}"
+           object-fit="contain"
+           src="https://gaoyuanming-projects.oss-cn-beijing.aliyuncs.com/cilicili/1.mp4"/>
+
+</view>

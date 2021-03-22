@@ -1,1 +1,28 @@
-/* pages/room/room.wxss */
+.main {
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 29, 31, .85);
+}
+
+.background-image {
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    filter: blur(50rpx);
+    position: absolute;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+}
+
+.van-nav-bar {
+    background: transparent !important;
+}
+
+.van-nav-bar__left {
+    color: #ffffff !important;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}

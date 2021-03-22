@@ -10,7 +10,7 @@
 
     <van-row gutter="15">
         <van-col span="12" wx:for="{{roomList}}" wx:key="index">
-            <view class="room-card">
+            <view class="room-card" bind:tap="clickRoom" data-id="{{item.id}}">
                 <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
                 <view class="room-card-t">我今天必吃鸡芜湖</view>
                 <view class="room-card-d">White五五开</view>
@@ -25,10 +25,10 @@
     </view>
     <van-row gutter="15">
         <van-col span="12" wx:for="{{roomList}}" wx:key="index">
-            <view>
+            <view class="room-card">
                 <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
-                <text class="room-card-t">我今天必吃鸡芜湖</text>
-                <text class="room-card-t">White五五开</text>
+                <view class="room-card-t">我今天必吃鸡芜湖</view>
+                <view class="room-card-d">White五五开</view>
             </view>
         </van-col>
     </van-row>

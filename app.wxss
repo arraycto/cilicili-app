@@ -3,7 +3,13 @@ page {
     Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
     sans-serif;
 
-    letter-spacing: 1px!important;
+    width: 100%;
+
+    height: 100%;
+
+    background: #000000;
+
+    letter-spacing: 1px !important;
 
     --theme-color: #ffffff;
 
@@ -16,7 +22,7 @@ page {
     --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
     /*毛玻璃效果背景颜色*/
-    --ground-glass-color: rgba(29, 29, 31, .5);
+    --ground-glass-color: rgba(29, 29, 31, .75);
 
     /*毛玻璃效果高斯模糊*/
     --ground-glass-filter: saturate(180%) blur(20px);
