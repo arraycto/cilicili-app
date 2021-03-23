@@ -9,6 +9,8 @@ page {
 
     background: #000000;
 
+    --theme-background: #000000;
+
     letter-spacing: 1px !important;
 
     --theme-color: #ffffff;
@@ -16,7 +18,7 @@ page {
     --inactive-color: #7d7e80;
 
     /*底部导航栏选中时颜色*/
-    --tabbar-item-active-color: #ffffff;
+    --tabbar-item-active-color: #4e54c8;
 
     /*通用阴影效果*/
     --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
@@ -27,4 +29,11 @@ page {
     /*毛玻璃效果高斯模糊*/
     --ground-glass-filter: saturate(180%) blur(20px);
 
+}
+
+/*隐藏scroll-view滚动条*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
 }

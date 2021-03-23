@@ -1,4 +1,4 @@
-<view>
+<view class="main">
     <view class="card">
         <image class="card-image" mode="aspectFill" src="../../assets/home.jpeg"></image>
     </view>

@@ -6,7 +6,7 @@ Page({
      */
     data: {
         active: 0,
-        roomList: [{id: '1'}, {id: '2'}, {id: '3'}, {id: '4'}]
+        roomList: [{id: '1'}, {id: '2'}, {id: '3'}, {id: '4'}, {id: '5'}, {id: '6'}]
     },
 
     clickRoom(e) {

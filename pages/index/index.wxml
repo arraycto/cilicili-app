@@ -1,10 +1,10 @@
 <view class="app">
     <view class="container">
         <view wx:if="{{active === 0}}">
-            <header title="Home" description="欢迎来到cilicili直播" icon="live"/>
-            <view class="page-view" scroll-y="{{true}}">
+            <header id="my-header" title="Home" description="欢迎来到cilicili直播" icon="live"/>
+            <scroll-view class="page-view" style="height: {{scrollViewHeight}}px;" scroll-y="{{true}}">
                 <home-page/>
-            </view>
+            </scroll-view>
         </view>
         <view wx:if="{{active === 1}}">
             <header title="Follow" description="这里都是我喜欢的主播" icon="star"/>

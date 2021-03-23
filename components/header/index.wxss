@@ -5,10 +5,13 @@
     padding-top: 5rpx;
     padding-left: 8rpx;
     font-size: 25rpx;
+    color: var(--tabbar-item-active-color);
 }
 
 .header-des {
     display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .header-t1 {
