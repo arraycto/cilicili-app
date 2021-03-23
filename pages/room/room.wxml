@@ -33,7 +33,7 @@
            src="{{room.url}}"/>
     <scroll-view scroll-y="{{true}}">
         <view class="barrage" wx:for="{{barrageList}}" wx:key="index">
-            <text class="barrage-t1">[{{item.title}}]</text>
+            <text class="barrage-t1">[{{item.username}}]</text>
             <text class="barrage-t2">{{item.content}}</text>
         </view>
     </scroll-view>
@@ -41,7 +41,16 @@
     <van-tabbar border="{{false}}" id="bottom-bar">
         <view class="barrage-input">
             <image class="send-image" src="../../assets/send.svg"/>
-            <input maxlength="500" placeholder="What do you want to say ?"></input>
+            <input adjust-position="{{false}}"
+                   value="{{barrageInputValue}}"
+                   bind:input="barrageInput"
+                   maxlength="500"
+                   placeholder="What do you want to say ?"/>
         </view>
+        <van-button class="send-btn"
+                    color="linear-gradient(to right, #4bb0ff, #6149f6)"
+                    bind:click="clickSubmit"
+                    round>
+            Submit</van-button>
     </van-tabbar>
 </view>

@@ -6,8 +6,8 @@ Page({
      */
     data: {
         active: 1,
-        sendBottom: 0,
         videoHeight: 0,
+        barrageInputValue: '',
         anchor: {
             name: 'White五五开',
             follow: 2890,
@@ -15,7 +15,7 @@ Page({
             avatar: 'https://gaoyuanming-photo.oss-cn-beijing.aliyuncs.com/logo/logo.png'
         },
         room: {
-            url: 'https://gaoyuanming-projects.oss-cn-beijing.aliyuncs.com/cilicili/1.mp4',
+            url: 'shttps://gaoyuanming-projects.oss-cn-beijing.aliyuncs.com/cilicili/1.mp4',
             id: '',
             ratio: 2560 / 1600,
         },
@@ -27,6 +27,26 @@ Page({
         wx.navigateBack({delta: 1})
     },
 
+    barrageInput(e) {
+        this.setData({
+            barrageInputValue: e.detail.value
+        })
+    },
+
+    clickSubmit() {
+        let item = {
+            username: '张三',
+            content: this.data.barrageInputValue
+        }
+        let arr = this.data.barrageList
+        arr.unshift(item)
+        this.setData({
+            barrageList: arr,
+            barrageInputValue: ''
+        })
+    },
+
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -34,14 +54,6 @@ Page({
         let windowWidth = wx.getSystemInfoSync().windowWidth;
         this.setData({
             videoHeight: windowWidth / this.data.room.ratio
-        })
-        let query = wx.createSelectorQuery();
-        query.select('#bottom-bar').boundingClientRect()
-        query.exec((res) => {
-            console.log(res[0].height)
-            this.setData({
-                sendBottom: res[0].height
-            })
         })
     },
 
@@ -55,22 +67,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        let barrageList = [{title: '张三', content: 'hello'}]
-        setTimeout(() => {
-            barrageList.unshift({
-                title: '里斯本',
-                content: 'hello1生命周期函数--监听页面加载生命周期函数--监听页面加载生命周期函数--监听页面加载生命周期函数--监听页面加载'
-            })
-            this.setData({
-                barrageList: barrageList
-            })
-            setTimeout(() => {
-                barrageList.unshift({title: '剋历史', content: 'hello2'})
-                this.setData({
-                    barrageList: barrageList
-                })
-            }, 2000)
-        }, 2000)
+        this.setData({
+            barrageList: [{username: '卢本伟', content: '欢迎来到我的直播间'}]
+        })
     },
 
     /**

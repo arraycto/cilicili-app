@@ -10,7 +10,7 @@
     color: #ffffff;
 }
 
-.tags-item{
+.tags-item {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -23,7 +23,7 @@
     background: rgba(256, 256, 256, .1);
 }
 
-.tags-item image{
+.tags-item image {
     width: 23px;
     height: 23px;
     margin-right: 5px;
@@ -76,7 +76,7 @@ video {
 }
 
 scroll-view {
-    height: 45%;
+    height: 43%;
 }
 
 .barrage {
@@ -118,4 +118,13 @@ input {
     width: 60rpx;
     height: 60rpx;
     margin-right: 30rpx;
+}
+
+.van-button {
+    height: 65rpx !important;
+}
+
+.send-btn {
+    margin-top: 18rpx;
+    margin-right: 20rpx;
 }
