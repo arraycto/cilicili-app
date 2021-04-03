@@ -1,13 +1,25 @@
 <view class="main">
     <image mode="aspectFill" class="background-image" src="../../assets/home.jpeg"/>
-    <van-nav-bar z-index="9"
+
+    <view class="header" style="{{'padding-top:' + navBarTop +  'px'}}">
+        <view class="header-main">
+            <image class="avatar" src="../../assets/aa.png"/>
+            <view>
+                <view class="avatar-des1">white五五开huh</view>
+                <view class="avatar-des2">340.9万人关注</view>
+            </view>
+            <van-button class="follow-btn" round type="primary" size="small" color="linear-gradient(to right, #4bb0ff, #6149f6)">关注</van-button>
+        </view>
+    </view>
+
+    <!--<van-nav-bar z-index="9"
                  border="{{false}}"
                  fixed="{{false}}">
         <view slot="left" bind:tap="onClickLeft">
             <image class="avatar" src="{{anchor.avatar}}"></image>
             <text class="anchor-header-t">{{anchor.name}} </text>
         </view>
-    </van-nav-bar>
+    </van-nav-bar>-->
     <view class="tags">
         <view class="tags-item" style="color: #f4ea2a;">
             <image src="../../assets/type.svg"/>
@@ -22,7 +34,7 @@
             More Anchor
         </view>
     </view>
-    <view style="width: 100%;height: 2vh;"></view>
+    <view style="width: 100%;height: 4vh;"></view>
     <video autoplay="{{true}}"
            style="height: {{videoHeight}}px;"
            show-center-play-btn="{{false}}"
@@ -31,12 +43,13 @@
            controls="{{true}}"
            object-fit="contain"
            src="{{room.url}}"/>
-    <scroll-view scroll-y="{{true}}">
+    <view style="width: 100%;height: 4vh;"></view>
+    <!--<scroll-view>
         <view class="barrage" wx:for="{{barrageList}}" wx:key="index">
             <text class="barrage-t1">[{{item.username}}]</text>
             <text class="barrage-t2">{{item.content}}</text>
         </view>
-    </scroll-view>
+    </scroll-view>-->
 
     <van-tabbar border="{{false}}" id="bottom-bar">
         <view class="barrage-input">
@@ -51,6 +64,7 @@
                     color="linear-gradient(to right, #4bb0ff, #6149f6)"
                     bind:click="clickSubmit"
                     round>
-            Submit</van-button>
+            Submit
+        </van-button>
     </van-tabbar>
 </view>

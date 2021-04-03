@@ -1,21 +1,65 @@
 .main {
-    padding: 0 30rpx;
+}
+
+.van-ellipsis {
+    letter-spacing: 1px;
+    font-weight: bold;
+    overflow: auto;
+    text-overflow: unset;
+}
+
+.van-tabs__line {
+    width: 28rpx !important;
+}
+
+swiper {
+    border-radius: 20rpx !important;
+}
+
+swiper-item {
+    border-radius: 20rpx !important;
+}
+
+.swiper-t {
+    display: flex;
+    margin-left: 37vw;
+    margin-bottom: 20rpx;
+}
+
+.swiper-t-item {
+    width: 15rpx;
+    border-radius: 50%;
+    height: 15rpx;
+    background: #4e54c8;
+    margin-left: 20rpx;
+}
+
+.active {
+    width: 50rpx;
+    border-radius: 20rpx;
+}
+
+
+.content {
+    padding: 0 35rpx;
 }
 
 .card {
-    height: 20vh;
-    margin: 2vh 0 3vh 0;
-    border-radius: 10rpx;
+    height: 25vh;
+    padding: 0 30rpx;
+    margin-top: 10px;
+    border-radius: 20rpx;
 }
 
 .card-image {
     width: 100%;
     height: 100%;
-    border-radius: 15rpx;
+    border-radius: 20rpx;
 }
 
 .room-card {
     margin-bottom: 40rpx;
+    background: #ffffff;
 }
 
 .room-card-image {
@@ -25,10 +69,10 @@
 }
 
 .room-card-t {
-    color: rgba(256, 256, 256, .8);
-    padding-top: 2px;
+    color: rgba(0, 0, 0, .7);
+    padding-top: 3px;
     font-weight: 500;
-    font-size: 25rpx;
+    font-size: 24rpx;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -40,24 +84,4 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-.list-header {
-    margin: 4vh 0 3vh 0;
-}
-
-.list-header-title {
-    color: #ffffff;
-    font-size: 35rpx;
-    font-weight: bolder;
-}
-
-.list-header-more {
-    float: right;
-    font-size: 25rpx;
-}
-
-.list-header-des {
-    font-size: 25rpx;
-    padding-top: 1vh;
 }

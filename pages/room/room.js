@@ -1,10 +1,13 @@
 // pages/room/room.js
+const app = getApp()
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        navBarTop: app.globalData.NavBarTop,
         active: 1,
         videoHeight: 0,
         barrageInputValue: '',

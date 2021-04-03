@@ -15,11 +15,6 @@ page {
     height: 100%;
 }
 
-.van-nav-bar {
-    color: #ffffff;
-    background: #000000 !important;
-}
-
 .van-tabbar-item {
     letter-spacing: 5rpx;
     font-weight: bolder;

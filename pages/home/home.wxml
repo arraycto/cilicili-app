@@ -1,36 +1,42 @@
 <view class="main">
-    <view class="card">
-        <image class="card-image" mode="aspectFill" src="../../assets/home.jpeg"></image>
-    </view>
-    <view class="list-header">
-        <text class="list-header-title">正在热播</text>
-        <text class="list-header-more">更多</text>
-        <view class="list-header-des">或许其中有你喜欢的主播～</view>
+
+    <swiper style="padding: 30rpx"
+            bindchange="swiperChange"
+            current="{{current}}"
+            duration="300"
+            autoplay="{{true}}"
+            interval="1500"
+            circular="{{true}}">
+        <swiper-item wx:for="{{posterList}}" wx:key="index">
+            <image class="card-image" mode="aspectFill" src="../../assets/home.jpeg"></image>
+        </swiper-item>
+    </swiper>
+
+    <view class="swiper-t">
+        <view wx:for="{{posterList}}"
+              wx:key="index"
+              class="{{index === current ? 'swiper-t-item active' : 'swiper-t-item'}}"/>
     </view>
 
-    <van-row gutter="15">
-        <van-col span="12" wx:for="{{roomList}}" wx:key="index">
-            <view class="room-card" bind:tap="clickRoom" data-id="{{item.id}}">
-                <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
-                <view class="room-card-t">我今天必吃鸡芜湖</view>
-                <view class="room-card-d">White五五开</view>
-            </view>
-        </van-col>
-    </van-row>
+    <view style="width:100%;height: 2vh"/>
 
-    <view class="list-header">
-        <text class="list-header-title">推荐视频</text>
-        <text class="list-header-more">更多</text>
-        <view class="list-header-des">为您挑选的有趣视频</view>
-    </view>
-    <van-row gutter="15">
-        <van-col span="12" wx:for="{{roomList}}" wx:key="index">
-            <view class="room-card">
-                <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
-                <view class="room-card-t">我今天必吃鸡芜湖</view>
-                <view class="room-card-d">White五五开</view>
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#4e54c8">
+        <van-tab title="Popular" class="content">
+            <view class="content">
+                <van-row gutter="15">
+                    <van-col span="12" wx:for="{{roomList}}" wx:key="index">
+                        <view class="room-card" bind:tap="clickRoom" data-id="{{item.id}}">
+                            <image mode="aspectFill" class="room-card-image" src="../../assets/home.jpeg"></image>
+                            <view class="room-card-t">我今天必吃鸡芜湖</view>
+                            <view class="room-card-d">White五五开</view>
+                        </view>
+                    </van-col>
+                </van-row>
             </view>
-        </van-col>
-    </van-row>
+        </van-tab>
+        <van-tab title="Living">内容 2</van-tab>
+        <van-tab title="Videos">内容 3</van-tab>
+        <van-tab title="More">内容 4</van-tab>
+    </van-tabs>
 
 </view>
